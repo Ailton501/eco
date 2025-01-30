@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTravel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-index.css">
+    <link rel="manifest" href="manifest.json"> 
+    <link rel="icon" href="recursos/img/icon.png">
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#viajes">Viajes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de Inicio -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <section id="inicio" class="inicio">
+        <h1 class="titulo-principal">Bienvenido a EcoTravel</h1>
+        <p class="subtitulo">Descubre los destinos más increíbles y sostenibles del mundo.</p>
+        <p class="descripcion">En EcoTravel nos comprometemos a ofrecer experiencias de viaje únicas que respetan y preservan el medio ambiente.</p>
+    </section>
+
+    <!-- Sección de Viajes -->
+    <section id="viajes">
+        <h2 style="color: white;">Nuestros Destinos</h2>
+        <div class="card-container">
+          <!-- Destino 1 -->
+          <div class="card" style="--clr:#4CAF50;">
+              <div class="circle">
+                  <img src="recursos/img/zonas/cancun-logo.png" alt="Cancún" class="logo" style="height: 300px; width: auto;">
+              </div>
+              <div class="content">
+                  <h2>Cancún</h2>
+                  <p>Disfruta de las playas de arena blanca y aguas cristalinas del Caribe Mexicano.</p>
+              </div>
+              <img src="recursos/img/zonas/cancun.png" alt="Cancún" class="product_img" style="height: 350px; width: auto;">
+          </div>
+      
+          <!-- Destino 2 -->
+          <div class="card" style="--clr:#009688;">
+              <div class="circle">
+                  <img src="recursos/img/zonas/chiapas-logo.png" alt="Chiapas" class="logo"  style="height: 300px; width: auto;">
+              </div>
+              <div class="content">
+                  <h2>Cañón del Sumidero</h2>
+                  <p>Navega por las imponentes paredes del Cañón del Sumidero en Chiapas.</p>
+              </div>
+              <img src="recursos/img/zonas/chiapas.png" alt="Cañón del Sumidero" class="product_img" style="height: 180px; width: auto;">
+          </div>
+      
+          <!-- Destino 3 -->
+          <div class="card" style="--clr:#FF5722;">
+              <div class="circle">
+                  <img src="recursos/img/zonas/Teotihuacan-Logo.png" alt="Teotihuacán" class="logo"  style="height: 300px; width: auto;">
+              </div>
+              <div class="content">
+                  <h2>Teotihuacán</h2>
+                  <p>Descubre las pirámides del Sol y la Luna en la Ciudad de los Dioses.</p>
+              </div>
+              <img src="recursos/img/zonas/teotihuacan.jpg" alt="Teotihuacán" class="product_img" style="height: 180px; width: auto;">
+          </div>
+      
+          <!-- Destino 4 -->
+          <div class="card" style="--clr:#3F51B5;">
+              <div class="circle">
+                  <img src="recursos/img/zonas/Oaxaca-logo.png" alt="Oaxaca" class="logo"  style="height: 300px; width: auto;">
+              </div>
+              <div class="content">
+                  <h2>Oaxaca</h2>
+                  <p>Vive la magia de sus tradiciones, gastronomía y arquitectura colonial.</p>
+              </div>
+              <img src="recursos/img/zonas/Oaxaca.jpg" alt="Oaxaca" class="product_img" style="height: 180px; width: auto;" >
+          </div>
+      
+          <!-- Destino 5 -->
+          <div class="card" style="--clr:#FF9800;">
+              <div class="circle">
+                  <img src="recursos/img/zonas/cabos-logo.png" alt="Los Cabos" class="logo"  style="height: 300px; width: auto;">
+              </div>
+              <div class="content">
+                  <h2>Los Cabos</h2>
+                  <p>Explora las playas de Baja California Sur y su vida marina.</p>
+              </div>
+              <img src="recursos/img/zonas/cabos.jpg" alt="Los Cabos" class="product_img" style="height: 300px; width: auto;">
+          </div>
+      </div>      
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contacto">
+        <h2 class="contacto-titulo">Contacto</h2>
+        <p class="contacto-texto">Si tienes alguna pregunta, contáctanos en <strong>contacto@ecotravel.com</strong> o utiliza el siguiente formulario:</p>
+        <!-- Formulario de Contacto -->
+        
+        <br><br>
+        <form class="formulario-contacto">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Número de teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" rows="5" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+</body>
+</html>

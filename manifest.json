@@ -1,0 +1,37 @@
+{
+  "name": "EcoTravel",
+  "short_name": "EcoTravel",
+  "description": "Explora destinos ecológicos en México.",
+  "lang": "es",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "recursos/img/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "recursos/img/icon2.jpg",
+      "sizes": "1920x1920",
+      "type": "image/jpeg"
+    }
+  ],
+  "id": "/index.html",
+  "start_url": "/index.html",
+  "screenshots": [
+    {
+      "src": "recursos/img/captura1.png",
+      "sizes": "1826x870",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "recursos/img/captura2.png",
+      "sizes": "432x763",
+      "type": "image/png"
+    }
+  ]
+}

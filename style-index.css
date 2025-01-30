@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.5)), url("recursos/img/FondoWeb.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#inicio {
+    padding: 1100px 200px 500px 200px; 
+    text-align: center;
+}
+
+.inicio, .contacto {
+    color: white;
+}
+
+.inicio .titulo-principal {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.inicio .subtitulo {
+    font-size: 1.5em;
+}
+
+.inicio .descripcion {
+    font-size: 1.2em;
+}
+
+.contacto-titulo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.contacto-texto {
+    font-size: 1.2em;
+}
+
+
+h2{
+    text-align: center;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+section {
+    margin-top: 100px;
+}
+
+/* Contenedor de las tarjetas */
+.card-container {
+    margin: 50px auto 0 auto; /* Asegurar espacio desde la parte superior */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 40px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.card:hover {
+    width: 600px;
+    transition-delay: 0.5s;
+}
+
+.card .circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 8px solid var(--clr);
+    background: #191919;
+    transition: 0.5s, background 0.5s;
+    transition-delay: 0.75s, 1s;
+    filter: drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 60px var(--clr));
+}
+
+.card:hover .circle::before {
+    width: 100%;
+    transition-delay: 0.5s;
+    height: 100%;
+    border-radius: 20px;
+    background: var(--clr);
+}
+
+.card .circle .logo {
+    position: relative;
+    width: 150px; 
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.card:hover .circle .logo {
+    transform: scale(0);
+    transition-delay: 0s;
+}
+
+.card .product_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0) rotate(315deg);
+    height: 300px;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover .product_img {
+    transition-delay: 0.75s;
+    transform: translate(-50%, -50%) scale(1) rotate(15deg);
+    top: 45%;
+    left: 75%;
+    height: 500px;
+}
+
+.card .content {
+    position: absolute;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    opacity: 0;
+    transition: 0.5s;
+    visibility: hidden;
+}
+
+.card:hover .content {
+    transition-delay: 0.75s;
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+}
+
+.card .content h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.6em; 
+    line-height: 1em;
+}
+
+.card .content p {
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.card .content a {
+    position: relative;
+    color: #111;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 1em; 
+}
+.card .content a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: #fff;
+    z-index: -1;
+    transition: 0.5s;
+    transform: scale(0.8);
+}
+
+.card .content a:hover::before {
+    transform: scale(1);
+}
+
+/* Estilos del formulario de contacto */
+#inicio {
+    padding: 1100px 20px 50px 20px; 
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+section {
+    margin-top: 100px;
+}
+
+/* Contenedor de las tarjetas */
+.card-container {
+    margin: 50px auto 0 auto; /* Asegurar espacio desde la parte superior */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 40px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.card:hover {
+    width: 600px;
+    transition-delay: 0.5s;
+}
+
+.card .circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 8px solid var(--clr);
+    background: #191919;
+    transition: 0.5s, background 0.5s;
+    transition-delay: 0.75s, 1s;
+    filter: drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 60px var(--clr));
+}
+
+.card:hover .circle::before {
+    width: 100%;
+    transition-delay: 0.5s;
+    height: 100%;
+    border-radius: 20px;
+    background: var(--clr);
+}
+
+.card .circle .logo {
+    position: relative;
+    width: 150px; 
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.card:hover .circle .logo {
+    transform: scale(0);
+    transition-delay: 0s;
+}
+
+.card .product_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0) rotate(315deg);
+    height: 300px;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover .product_img {
+    transition-delay: 0.75s;
+    transform: translate(-50%, -50%) scale(1) rotate(15deg);
+    top: 45%;
+    left: 75%;
+    height: 500px;
+}
+
+.card .content {
+    position: absolute;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    opacity: 0;
+    transition: 0.5s;
+    visibility: hidden;
+}
+
+.card:hover .content {
+    transition-delay: 0.75s;
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+}
+
+.card .content h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.6em; 
+    line-height: 1em;
+}
+
+.card .content p {
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.card .content a {
+    position: relative;
+    color: #111;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 1em; 
+}
+
+/* Estilos del formulario de contacto */
+.formulario-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+@media (max-width: 1024px) {
+
+    .card-container {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+    .inicio .titulo-principal {
+        font-size: 1.8em;
+    }
+
+    .inicio .subtitulo,
+    .inicio .descripcion {
+        font-size: 1.2em;
+    }
+
+    .formulario-contacto {
+        width: 90%; /* Centrar y ajustar el formulario */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .card-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+
+
+
+    .inicio {
+        padding: 20px;
+    }
+
+    .inicio .titulo-principal {
+        font-size: 1.5em;
+    }
+
+    .inicio .subtitulo,
+    .inicio .descripcion {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr; 
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    .card{
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar ul {
+        padding: 0;
+    }
+
+    .navbar ul li {
+        font-size: 0.9em;
+    }
+
+
+    .inicio .titulo-principal {
+        font-size: 1.2em;
+    }
+
+    .inicio .subtitulo,
+    .inicio .descripcion {
+        font-size: 0.9em;
+    }
+
+    .formulario-contacto {
+        width: 100%;
+        padding: 10px;
+    }
+}
